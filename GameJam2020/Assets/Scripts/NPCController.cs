@@ -65,35 +65,6 @@ public class NPCController : MonoBehaviour
         }   
         
         UpdateAlertLevel();
-        switch (alertLevel)
-        {
-            case AlertLevel.LowAlert: 
-                LowAlertUpdate();
-                break;
-            case AlertLevel.MediumAlert:
-                MediumAlertUpdate();
-                break;
-            case AlertLevel.HighAlert:
-                HighAlertUpdate();
-                break;
-        }
-        
-        // update vision cone
-        cone.SetSuspicionLevel(suspicionLevel);
-        // make suspicion level go down
-        if (PlayerInFOV)
-        {
-            suspicionLevel += SuspicionIncreasePerTick;
-        }
-        else if (suspicionLevel > 0f)
-        {
-            suspicionLevel -= SuspicionDecreasePerTick;
-            if (suspicionLevel < 0f) suspicionLevel = 0f;
-        }
-    }
-
-    void LowAlertUpdate()
-    {
         var rand = new System.Random();
         var roll = (float)rand.NextDouble();
         if (roll < LookChance && Time.time - lastLook > LookAnimCooldown)
@@ -117,16 +88,19 @@ public class NPCController : MonoBehaviour
                     transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
             }
         }
-    }
-
-    void MediumAlertUpdate()
-    {
         
-    }
-
-    void HighAlertUpdate()
-    {
-    
+        // update vision cone
+        cone.SetSuspicionLevel(suspicionLevel);
+        // make suspicion level go down
+        if (PlayerInFOV)
+        {
+            suspicionLevel += SuspicionIncreasePerTick;
+        }
+        else if (suspicionLevel > 0f)
+        {
+            suspicionLevel -= SuspicionDecreasePerTick;
+            if (suspicionLevel < 0f) suspicionLevel = 0f;
+        }
     }
 
     void UpdateAlertLevel()

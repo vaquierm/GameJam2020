@@ -26,6 +26,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
+          <e p="ClubLights.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MenuButton.cs" t="Include" />
           <e p="NPCController.cs" t="Include" />
