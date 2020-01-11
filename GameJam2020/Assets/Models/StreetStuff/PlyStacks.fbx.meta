@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 94df234962727c591be945ce06d1aee2
+guid: aa65581ab648dc24eb91e5584f096a91
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: d263224da53bec04c80ecbd58be6fab8, type: 2}
+      74: 1989289236423521904
+    second: Default Take
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -92,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
