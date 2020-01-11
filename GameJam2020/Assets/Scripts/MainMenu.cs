@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     private float _backgroundAlpha = 1f;
     private float _backgroundFadeSpeed = 0f;
     private float _buttonsAlpha = 0f;
-    private float _buttonsFadeSpeed = 0f;
+    private float _buttonsFadeSpeed = 0.5f;
 
     // Start is called before the first frame update
     private IEnumerator Start()
@@ -22,8 +22,7 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         _finalBackgroundA = FinalBackgroundAlpha / 255f;
-        _backgroundFadeSpeed = 0.5f * (255 - FinalBackgroundAlpha) / 255f;
-        _buttonsFadeSpeed = 0.5f;
+        _backgroundFadeSpeed = _buttonsFadeSpeed * (255 - FinalBackgroundAlpha) / 255f;
     }
 
     // Update is called once per frame
