@@ -120,6 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &168849505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +206,15 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aac76115d492559ea13760497a2f2bb, type: 3}
 --- !u!1 &645280031
+=======
+--- !u!4 &629027498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 277955805481142988, guid: 378fe6974720a99ec949cd3d3a7143c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5089572924126427084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1113438922
+>>>>>>> 27dcf66883a38d4e77e21a9014a7732c8e22fb4c
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 4c63108d70c06fffda06418304abae16,
@@ -213,9 +223,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 645280034}
   - component: {fileID: 645280033}
   - component: {fileID: 645280032}
+=======
+  - component: {fileID: 1113438925}
+  - component: {fileID: 1113438924}
+  - component: {fileID: 1113438923}
+  - component: {fileID: 1113438926}
+>>>>>>> 27dcf66883a38d4e77e21a9014a7732c8e22fb4c
   m_Layer: 0
   m_Name: 2Story
   m_TagString: Untagged
@@ -278,6 +295,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1908265873}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 645280031}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -6.76, y: 0, z: -10.42}
@@ -287,6 +305,31 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!1 &865109110
+=======
+  m_GameObject: {fileID: 1113438922}
+  m_LocalRotation: {x: 0.11137883, y: -0, z: -0, w: 0.99377805}
+  m_LocalPosition: {x: 0, y: 3.1, z: -12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 12.790001, y: 0, z: 0}
+--- !u!114 &1113438926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113438922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c26fea4023911441b27eefc52c7b027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 629027498}
+  Distance: 10
+--- !u!1 &1274594164
+>>>>>>> 27dcf66883a38d4e77e21a9014a7732c8e22fb4c
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
