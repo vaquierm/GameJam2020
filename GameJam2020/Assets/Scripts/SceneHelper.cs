@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHelper : MonoBehaviour
 {
-    private static readonly List<string> SceneStrings =  new List<string>() { "Lore Scene", "Main Menu" };
+    private static readonly List<string> SceneStrings =  new List<string>() { "Lore Scene", "Main Menu", "Game" };
     
     public static void NextScene()
     {
@@ -13,7 +13,7 @@ public class SceneHelper : MonoBehaviour
         // Reset to main menu when no more scenes to play
         if (activeSceneIndex >= SceneStrings.Count - 1)
         {
-            SceneManager.LoadScene(SceneStrings[0]);
+            SceneManager.LoadScene(SceneStrings[1]);
         }
         // Otherwise, go to the next scene
         else
