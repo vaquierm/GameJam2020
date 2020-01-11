@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.U2D;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class VisionCone : MonoBehaviour
 {
