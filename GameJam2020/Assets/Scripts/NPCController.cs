@@ -91,7 +91,7 @@ public class NPCController : MonoBehaviour
         {
             IsTriggered = true;
             exclamationMark.Enable();
-            ExclamationFadeCount = 50;
+            ExclamationFadeCount = 15;
             GameManager.SetNPCDetection(true);
         }
 

@@ -24,10 +24,20 @@ public class GameManager : MonoBehaviour
 
     public CanvasGroup GameOverScreenGroup;
 
+    public CanvasGroup WinScreenGroup;
+    public Text WinScoreText;
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerController.SetCanMove(true);
+    }
+
+    private IEnumerator DelayedGameOverScreen()
+    {
+        yield return new WaitForSeconds(1f);
+
+        GameOverScreenGroup.alpha = 1;
     }
 
     // Update is called once per frame
@@ -41,16 +51,26 @@ public class GameManager : MonoBehaviour
         // If win collider has been hit, YOU WIN
         if (_winColliderHit)
         {
-            Debug.Log("WIN");
+            ObjectiveCanvasGroup.alpha = 0;
+            GameOverScreenGroup.alpha = 0;
+            WinScreenGroup.alpha = 1;
+
+            WinScoreText.text = $"Your score: {_timerTime:0.00}s";
+            TimerText.text = "";
+
+            PlayerController.SetCanMove(false);
+            _gameOver = true;
         }
 
         // If NPC has detected you, YOU LOSE
         if (_npcDetection)
         {
             ObjectiveCanvasGroup.alpha = 0;
-            GameOverScreenGroup.alpha = 1;
+            WinScreenGroup.alpha = 0;
 
             PlayerController.SetCanMove(false);
+
+            StartCoroutine(DelayedGameOverScreen());
 
             _gameOver = true;
             return;
