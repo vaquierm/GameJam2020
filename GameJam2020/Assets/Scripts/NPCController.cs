@@ -36,7 +36,7 @@ public class NPCController : MonoBehaviour
     public bool IsTriggered = false;
     public bool PlayerInFOV = false;
 
-    private int ExclamationFadeCount;
+    private float ExclamationFadeCount;
 
     private float RotationCount;
     
@@ -76,9 +76,9 @@ public class NPCController : MonoBehaviour
     {
         if (ExclamationFadeCount > 0)
         {
-            ExclamationFadeCount--;
+            ExclamationFadeCount -= Time.deltaTime;
         }
-        if (ExclamationFadeCount == 0)
+        if (ExclamationFadeCount <= 0f)
         {
             exclamationMark.Disable();
         }
@@ -91,7 +91,7 @@ public class NPCController : MonoBehaviour
         {
             IsTriggered = true;
             exclamationMark.Enable();
-            ExclamationFadeCount = 15;
+            ExclamationFadeCount = 0.9f;
             GameManager.SetNPCDetection(true);
         }
 
