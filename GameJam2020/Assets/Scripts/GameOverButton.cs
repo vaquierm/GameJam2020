@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class MenuButton : MonoBehaviour
+public class GameOverButton : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneHelper.NextScene();
+        SceneHelper.ResetScene();
     }
 
     public void Quit()

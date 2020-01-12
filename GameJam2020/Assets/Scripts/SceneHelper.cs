@@ -22,6 +22,11 @@ public class SceneHelper : MonoBehaviour
         }
     }
 
+    public static void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private static int GetSceneStringIndex(string activeScene)
     {
         return SceneStrings.FindIndex(s => string.Equals(s, activeScene));

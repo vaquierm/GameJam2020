@@ -12,6 +12,8 @@ public enum AlertLevel
 
 public class NPCController : MonoBehaviour
 {
+    public GameManager GameManager;
+
     public ExclamationMark exclamationMark;
     public float suspicionLevel = 0f;
     public VisionCone cone;
@@ -61,7 +63,7 @@ public class NPCController : MonoBehaviour
         {
             IsTriggered = true;
             exclamationMark.Enable();
-            // TODO: The Game is over here, communicate with game manager
+            GameManager.SetNPCDetection(true);
         }   
         
         UpdateAlertLevel();
