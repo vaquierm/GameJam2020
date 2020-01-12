@@ -19,31 +19,31 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (_canMove)
         {
-            var horizontal = 0;
-            var vertical = 0;
-            var horizontalRaw = 0;
-            var verticalRaw = 0;
+            var horizontal = 0.0f;
+            var vertical = 0.0f;
+            var horizontalRaw = 0.0f;
+            var verticalRaw = 0.0f;
             var move = false;
             if (Input.GetKey(KeyCode.W))
             {
-                vertical += 1;
-                verticalRaw += 1;
+                vertical += Time.deltaTime;
+                verticalRaw += Time.deltaTime;
                 move = true;
             }
             if (Input.GetKey(KeyCode.A))
             {
-                horizontal -= 1;
-                horizontalRaw -= 1;
+                horizontal -= Time.deltaTime;
+                horizontalRaw -= Time.deltaTime;
                 move = true;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                vertical -= 1;
-                verticalRaw -= 1;
+                vertical -= Time.deltaTime;
+                verticalRaw -= Time.deltaTime;
                 move = true;
             }
             if (Input.GetKey(KeyCode.D))
