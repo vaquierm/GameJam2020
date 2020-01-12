@@ -40,25 +40,31 @@ public class NPCController : MonoBehaviour
     private Rigidbody rb;
     private AlertLevel alertLevel;
     private Vector3 initialRotation;
-    private Vector3 targetRotation;
     private bool rotating = false;
     private float rotationSpeed = 0f;
     
     private float lastLook;
+
+    private System.Random rand;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         initialRotation = transform.rotation.eulerAngles;
-        targetRotation = initialRotation;
         alertLevel = AlertLevel.LowAlert;
         cone.SetThresholds(LowAlertThreshold, MediumAlertThreshold, HighAlertThreshold);
+
+        rand = new System.Random();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.IsGameOver())
+        {
+            return;
+        }
         if (suspicionLevel > TriggeredThreshold && !IsTriggered)
         {
             IsTriggered = true;
@@ -96,13 +102,10 @@ public class NPCController : MonoBehaviour
 
     void LowAlertUpdate()
     {
-        var rand = new System.Random();
-        var roll = (float)rand.NextDouble();
-        if (roll < LookChance && Time.time - lastLook > LookAnimCooldown)
+        if (Time.time - lastLook > LookAnimCooldown && (float)rand.NextDouble() < LookChance)
         {
             lastLook = Time.time;
-            roll = (float)rand.NextDouble();
-            if (roll > 0.5f)
+            if ((float)rand.NextDouble() > 0.5f)
             {
                 anim.SetTrigger("LookDown");
             }
@@ -115,7 +118,7 @@ public class NPCController : MonoBehaviour
         {
             if (cone.coneEnabled)
             {
-                    var angle = Mathf.PingPong(Time.time * RotationSpeed, 2*ScanAngle) - ScanAngle;
+                    var angle = initialRotation.y + Mathf.PingPong(Time.time * RotationSpeed, 2*ScanAngle) - ScanAngle;
                     transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
             }
         }

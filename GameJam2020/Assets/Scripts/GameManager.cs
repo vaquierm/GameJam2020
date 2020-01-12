@@ -86,4 +86,9 @@ public class GameManager : MonoBehaviour
     {
         _npcDetection = detect;
     }
+
+    public bool IsGameOver()
+    {
+        return _gameOver;
+    }
 }
