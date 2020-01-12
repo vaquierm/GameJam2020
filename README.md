@@ -1,4 +1,4 @@
-# Cutsies
+![Screenshot of title](https://github.com/vaquierm/GameJam2020/blob/master/Screenshots/TitleImage.PNG)
 
 ## Description
 
