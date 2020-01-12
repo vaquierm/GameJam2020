@@ -2,7 +2,7 @@
 
 ## Description
 
-Cutsies is our submission to McGameJam2020. The theme of the game jam was "Can't go back". 
+Cutsies is our submission to *McGameJam 2020*. The theme of the game jam was "Can't go back". Our team chose to interpret this prompt with an added comma - "Can't, go back!" With this new idea, we created a line-cutting game in *Unity 3D* which the player must successfully cut in front of a whole line of people without getting called out.
 
 ## Gameplay Instructions
 
@@ -41,8 +41,13 @@ Gabrielle Doucette-Poirier, Evan Laflamme, Justin Tremblay, Michael Vaquier
 ### Images:
 
 - Exclamation mark: https://knowyourmeme.com/memes/metal-gear-solid-enemy-alert
-- Menu page art inspiration: OZFM
+- Menu page art inspiration: OZFM, image found at https://qph.fs.quoracdn.net/main-qimg-fe321a27683986a2f7ec9267b3b10e47
 
 ### 3D Assets:
 
-- All 3D assets: http://quaternius.com/assets.html
+- Small Garbage Can: https://www.cgtrader.com/free-3d-models/exterior/other/outdoor-street-bin-with-broken-glass-game-ready
+- Dumpster: https://www.cgtrader.com/free-3d-models/exterior/street/low-poly-dumpster
+- Rope Barrier: https://www.cgtrader.com/free-3d-models/furniture/other/velvet-rope-with-stands-55f94494fc6b46d3583bc18ad9fe8faf
+- Cardboard boxes: https://www.cgtrader.com/free-3d-models/household/other/simple-cardboard-box-with-cap
+- Wooden pallet stacks: https://www.cgtrader.com/free-3d-models/vehicle/part/free-pallet
+- Character and building models: https://www.patreon.com/quaternius
