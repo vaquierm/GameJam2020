@@ -116,11 +116,11 @@ public class NPCController : MonoBehaviour
         // make suspicion level go down
         if (PlayerInFOV)
         {
-            suspicionLevel += SuspicionIncreasePerTick;
+            suspicionLevel += SuspicionIncreasePerTick * Time.deltaTime;
         }
         else if (suspicionLevel > 0f)
         {
-            suspicionLevel -= SuspicionDecreasePerTick;
+            suspicionLevel -= SuspicionDecreasePerTick * Time.deltaTime;
             if (suspicionLevel < 0f) suspicionLevel = 0f;
         }
     }

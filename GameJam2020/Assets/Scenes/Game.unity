@@ -15224,7 +15224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137580417433395}
   m_LocalRotation: {x: -0.0040777437, y: 0.13047594, z: -0.01806545, w: 0.9912785}
-  m_LocalPosition: {x: -0.4017141, y: 0.024469376, z: 12.689487}
+  m_LocalPosition: {x: -0.4017141, y: 0, z: 12.689487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131137580830205399}
@@ -15303,12 +15303,12 @@ MonoBehaviour:
   MediumAlertThreshold: 15
   HighAlertThreshold: 60
   TriggeredThreshold: 80
-  LookChance: 0.1
+  LookChance: 0
   LookAnimCooldown: 9
-  ScanAngle: 75
-  RotationSpeed: 10
-  SuspicionIncreasePerTick: 0.9
-  SuspicionDecreasePerTick: 0.55
+  ScanAngle: 40
+  RotationSpeed: 15
+  SuspicionIncreasePerTick: 35
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!114 &4131137578908414260
@@ -15336,8 +15336,8 @@ MonoBehaviour:
   LookAnimCooldown: 25
   ScanAngle: 20
   RotationSpeed: 2
-  SuspicionIncreasePerTick: 0.75
-  SuspicionDecreasePerTick: 0.5
+  SuspicionIncreasePerTick: 30
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!136 &4131137578908414261
@@ -15397,8 +15397,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137580144349805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 0.03, z: 22.16}
-  m_LocalScale: {x: 1, y: 1.2, z: 1}
+  m_LocalPosition: {x: 0.44, y: 0, z: 22.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131137580541397129}
   - {fileID: 2168433670963834445}
@@ -15413,8 +15413,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137580079856235}
-  m_LocalRotation: {x: 0.00036219106, y: -0.26486304, z: 0.016705085, w: 0.9641413}
-  m_LocalPosition: {x: -0.64, y: -0, z: 8.28}
+  m_LocalRotation: {x: -0.0012361994, y: -0.17149423, z: 0.016663216, w: 0.98504347}
+  m_LocalPosition: {x: -0.52, y: 0, z: 8.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131137580471656591}
@@ -15422,7 +15422,7 @@ Transform:
   - {fileID: 2001203342}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.54700005, y: -30.713001, z: 1.835}
+  m_LocalEulerAnglesHint: {x: 0.18800001, y: -19.749, z: 1.9060001}
 --- !u!136 &4131137579181966632
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15462,8 +15462,8 @@ MonoBehaviour:
   LookAnimCooldown: 60
   ScanAngle: 70
   RotationSpeed: 10
-  SuspicionIncreasePerTick: 0.65
-  SuspicionDecreasePerTick: 0.35
+  SuspicionIncreasePerTick: 27
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!1 &4131137579181966634
@@ -15509,7 +15509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137580919943684}
   m_LocalRotation: {x: 0.024508648, y: -0.38463268, z: -0.01965371, w: -0.922535}
-  m_LocalPosition: {x: 0.47, y: -0.12, z: 38.48}
+  m_LocalPosition: {x: 0.47, y: 0, z: 38.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131137580237678816}
@@ -15742,8 +15742,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137580703951880}
   m_LocalRotation: {x: 0.059175305, y: 0.48377657, z: 0.015895473, w: 0.8730441}
-  m_LocalPosition: {x: 0.43, y: -0.55, z: 25.92}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.9}
+  m_LocalPosition: {x: 0.43, y: 0, z: 25.92}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.9}
   m_Children:
   - {fileID: 4131137580308281068}
   - {fileID: 2168433671322652712}
@@ -15882,10 +15882,10 @@ MonoBehaviour:
   TriggeredThreshold: 80
   LookChance: 0.17
   LookAnimCooldown: 100
-  ScanAngle: 25
-  RotationSpeed: 3
-  SuspicionIncreasePerTick: 0.4
-  SuspicionDecreasePerTick: 0.3
+  ScanAngle: 20
+  RotationSpeed: 6
+  SuspicionIncreasePerTick: 25
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!136 &4131137580079856233
@@ -16014,8 +16014,8 @@ MonoBehaviour:
   LookAnimCooldown: 50
   ScanAngle: 270
   RotationSpeed: 6
-  SuspicionIncreasePerTick: 0.65
-  SuspicionDecreasePerTick: 0.4
+  SuspicionIncreasePerTick: 29
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!136 &4131137580144349807
@@ -16256,7 +16256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137578908414263}
   m_LocalRotation: {x: 0.00507428, y: -0.29420534, z: -0.018772105, w: 0.9555444}
-  m_LocalPosition: {x: -0.04, y: 0.07, z: 29.39}
+  m_LocalPosition: {x: -0.04, y: 0, z: 29.39}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4131137579589364691}
@@ -16272,8 +16272,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131137578862926088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5117784, y: 0.03, z: 34.07965}
+  m_LocalRotation: {x: -0, y: -0.44926447, z: -0, w: 0.8933989}
+  m_LocalPosition: {x: 0.47, y: 0, z: 35.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131137579540988908}
@@ -16281,7 +16281,7 @@ Transform:
   - {fileID: 1070502893}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -53.393, z: 0}
 --- !u!114 &4131137580417433392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16306,9 +16306,9 @@ MonoBehaviour:
   LookChance: 0.08
   LookAnimCooldown: 30
   ScanAngle: 30
-  RotationSpeed: 7
-  SuspicionIncreasePerTick: 0.6
-  SuspicionDecreasePerTick: 0.3
+  RotationSpeed: 8
+  SuspicionIncreasePerTick: 26
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!136 &4131137580417433393
@@ -16650,8 +16650,8 @@ MonoBehaviour:
   LookAnimCooldown: 32
   ScanAngle: 90
   RotationSpeed: 12
-  SuspicionIncreasePerTick: 0.7
-  SuspicionDecreasePerTick: 0.4
+  SuspicionIncreasePerTick: 31
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!114 &4131137580830205395
@@ -16832,12 +16832,12 @@ MonoBehaviour:
   MediumAlertThreshold: 15
   HighAlertThreshold: 60
   TriggeredThreshold: 80
-  LookChance: 0.02
+  LookChance: 0
   LookAnimCooldown: 40
   ScanAngle: 100
   RotationSpeed: 7
-  SuspicionIncreasePerTick: 1.2
-  SuspicionDecreasePerTick: 0.6
+  SuspicionIncreasePerTick: 30
+  SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
 --- !u!4 &4189821994325600281
