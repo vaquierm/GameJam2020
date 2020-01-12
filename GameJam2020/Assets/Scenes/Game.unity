@@ -15307,7 +15307,7 @@ MonoBehaviour:
   LookAnimCooldown: 9
   ScanAngle: 40
   RotationSpeed: 15
-  SuspicionIncreasePerTick: 35
+  SuspicionIncreasePerTick: 40
   SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
@@ -15336,7 +15336,7 @@ MonoBehaviour:
   LookAnimCooldown: 25
   ScanAngle: 20
   RotationSpeed: 2
-  SuspicionIncreasePerTick: 30
+  SuspicionIncreasePerTick: 33
   SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
@@ -16650,7 +16650,7 @@ MonoBehaviour:
   LookAnimCooldown: 32
   ScanAngle: 90
   RotationSpeed: 12
-  SuspicionIncreasePerTick: 31
+  SuspicionIncreasePerTick: 33
   SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
@@ -16836,7 +16836,7 @@ MonoBehaviour:
   LookAnimCooldown: 40
   ScanAngle: 100
   RotationSpeed: 7
-  SuspicionIncreasePerTick: 30
+  SuspicionIncreasePerTick: 45
   SuspicionDecreasePerTick: 20
   IsTriggered: 0
   PlayerInFOV: 0
