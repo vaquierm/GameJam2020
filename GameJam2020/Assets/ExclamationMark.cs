@@ -25,7 +25,16 @@ public class ExclamationMark : MonoBehaviour
             audioSource.PlayOneShot(audioSource.clip);
         }
     }
-    
+
+    public void Disable()
+    {
+        if (hasFired)
+        {
+            hasFired = false;
+            spriteRenderer.enabled = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

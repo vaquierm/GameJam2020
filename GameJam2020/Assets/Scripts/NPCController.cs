@@ -35,6 +35,10 @@ public class NPCController : MonoBehaviour
     public float SuspicionDecreasePerTick = 0f;
     public bool IsTriggered = false;
     public bool PlayerInFOV = false;
+
+    private int ExclamationFadeCount;
+
+    private float RotationCount;
     
     
     private Rigidbody rb;
@@ -47,6 +51,8 @@ public class NPCController : MonoBehaviour
 
     private System.Random rand;
 
+    private int Direction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,12 +61,28 @@ public class NPCController : MonoBehaviour
         alertLevel = AlertLevel.LowAlert;
         cone.SetThresholds(LowAlertThreshold, MediumAlertThreshold, HighAlertThreshold);
 
-        rand = new System.Random();
+        rand = new System.Random((int) (RotationSpeed * (SuspicionIncreasePerTick * 100) * ScanAngle * LookAnimCooldown) * (int) (System.DateTime.Now.Ticks % int.MaxValue));
+        Direction = rand.Next(2);
+        if (Direction == 0)
+        {
+            Direction = -1;
+        }
+
+        RotationCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (ExclamationFadeCount > 0)
+        {
+            ExclamationFadeCount--;
+        }
+        if (ExclamationFadeCount == 0)
+        {
+            exclamationMark.Disable();
+        }
+
         if (GameManager.IsGameOver())
         {
             return;
@@ -69,8 +91,11 @@ public class NPCController : MonoBehaviour
         {
             IsTriggered = true;
             exclamationMark.Enable();
+            ExclamationFadeCount = 50;
             GameManager.SetNPCDetection(true);
-        }   
+        }
+
+        
         
         UpdateAlertLevel();
         switch (alertLevel)
@@ -118,20 +143,21 @@ public class NPCController : MonoBehaviour
         {
             if (cone.coneEnabled)
             {
-                    var angle = initialRotation.y + Mathf.PingPong(Time.time * RotationSpeed, 2*ScanAngle) - ScanAngle;
-                    transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
+                var angle = initialRotation.y + (Direction * Mathf.PingPong(RotationCount * RotationSpeed, 2 * ScanAngle)) - ScanAngle;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
+                RotationCount += Time.deltaTime;
             }
         }
     }
 
     void MediumAlertUpdate()
     {
-        
+
     }
 
     void HighAlertUpdate()
     {
-    
+
     }
 
     void UpdateAlertLevel()
